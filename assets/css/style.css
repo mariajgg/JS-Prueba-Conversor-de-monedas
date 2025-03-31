@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(144, 200, 223);
+    background-color: rgb(231, 141, 105);
     color: black;
     text-align: center;
     padding: 20px;
@@ -52,7 +52,7 @@ input, select {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #c5838e;
+    background-color: #96515a;
     color: white;
     font-size: 16px;
     border: none;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #ee829d;
+    background-color: #b94865;
 }
 
 #resultado {
