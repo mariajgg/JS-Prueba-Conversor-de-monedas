@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: rgb(144, 200, 223);
+    color: black;
     text-align: center;
     padding: 20px;
     margin: 0;
@@ -11,8 +11,8 @@ body {
 }
 
 h1 {
-    border-top: 2px solid blue;
-    border-bottom: 2px solid blue;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
     padding: 20px;
 }
 
@@ -52,7 +52,7 @@ input, select {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #00bcd4;
+    background-color: #c5838e;
     color: white;
     font-size: 16px;
     border: none;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #0097a7;
+    background-color: #ee829d;
 }
 
 #resultado {
