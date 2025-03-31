@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Conversor de Monedas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    </head>
-
+    <title>Document</title>
+  </head>
   <body>
     <div class="container">
       <div class="box">
@@ -21,12 +20,11 @@
               placeholder="Ingrese el monto en CLP"
               id="cifra"
             />
-
             <p>Moneda a Convertir:</p>
             <select id="moneda">
               <option value="">-- Seleccione Moneda --</option>
-              <option value="dolar">Dolar</option>
-              <option value="euro">Euro</option>
+              <option value="dolar">Dolares</option>
+              <option value="euro">Euros</option>
             </select>
             <button id="calcular">Buscar</button>
             <p id="resultado">...</p>
@@ -34,14 +32,12 @@
           </article>
         </div>
       </div>
-
       <div class="grafico">
         <h2>Gráfico <span id="identificador"></span></h2>
         <canvas id="myChart"> </canvas>
       </div>
     </div>
   </body>
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./assets/js/script.js"></script>
 </html>
