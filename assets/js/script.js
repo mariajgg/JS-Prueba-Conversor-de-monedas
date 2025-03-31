@@ -16,17 +16,6 @@ const getApi = async (url) => {
   }
 };
 
-  // Mostrar el resultado en el DOM según la moneda seleccionada
-  if (monedaDif === "dolar") {
-    identificador.innerHTML = `${data.dolar.codigo}`;
-    total.innerHTML = `<p>Monto: ${formatoDolar} ${data.dolar.codigo}</p>`;
-  } else if (monedaDif === "euro") {
-    identificador.innerHTML = `${data.euro.codigo}`;
-    total.innerHTML = `<p>Monto: ${formatoEuro} ${data.euro.codigo}</p>`;
-  } else {
-    total.innerHTML = `<p>Por favor selecciona una moneda válida.</p>`;
-  }
-
 // Función para procesar y mostrar los datos
 const renderDom = (data) => {
   const valorDolar = Math.trunc(data.dolar.valor); // Valor del dólar (sin decimales)
@@ -35,15 +24,15 @@ const renderDom = (data) => {
   const monedaDif = selecMoneda.value; // Obtener el valor seleccionado en el <select>
   const montoIngresado = parseFloat(inputMoneda.value); // Obtener el monto desde el input
 
-   // Calcular conversiones
-  const calcularDolar = montoIngresado / valorDolar; // Usar montoIngresado aquí
-  const calcularEuro = montoIngresado / valorEuro; // Usar montoIngresado aquí 
-  
   // Verificar si el monto ingresado es válido
   if (isNaN(montoIngresado) || montoIngresado <= 0) {
     total.innerHTML = "Por favor, ingresa un monto válido.";
     return;
   }
+
+  // Calcular conversiones
+  const calcularDolar = montoIngresado / valorDolar; // Usar montoIngresado aquí
+  const calcularEuro = montoIngresado / valorEuro; // Usar montoIngresado aquí
 
   // Formato de Moneda
   const formatoDolar = calcularDolar.toLocaleString("en-US", {
@@ -54,6 +43,17 @@ const renderDom = (data) => {
     style: "currency",
     currency: "EUR",
   });
+
+  // Mostrar el resultado en el DOM según la moneda seleccionada
+  if (monedaDif === "dolar") {
+    identificador.innerHTML = `${data.dolar.codigo}`;
+    total.innerHTML = `<p>Monto: ${formatoDolar} ${data.dolar.codigo}</p>`;
+  } else if (monedaDif === "euro") {
+    identificador.innerHTML = `${data.euro.codigo}`;
+    total.innerHTML = `<p>Monto: ${formatoEuro} ${data.euro.codigo}</p>`;
+  } else {
+    total.innerHTML = `<p>Por favor selecciona una moneda válida.</p>`;
+  }
 };
 
 // Función para manejar el evento de clic en el botón "Calcular"
